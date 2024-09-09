@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVCE</title>
+    <link rel="stylesheet" href="svce.css">
+</head>
+
+<body>
+    <nav>
+    <img class="logo" src="https://www.svce.ac.in/wp-content/uploads/2021/01/logo.png" alt="SVCE Logo">
+        <div class="nav-links">
+            <a href="svce.html">Home</a>
+            <a href="#">Admissions</a>
+            <a href="#">Academics</a>
+            <a href="#">Campus Life</a>
+            <a href="#">Research</a>
+            <a href="placement.html">Placement</a>
+            <a href="#">Alumni</a>
+            <a href="aboutas.html">About Us</a>
+            <a href="#">News & Events</a>
+            <a href="#">Get in Touch</a>
+        </div>
+    </nav>
+
+    <div class="col-12">
+        <ul class="flex">
+            <li class="blue"><a href="" class="ptb-10 text-center pl-5">NBA</a></li>
+            <li class="orange"><a href="" class="ptb-10 text-center pl-5">NAAC A+ Accredited</a></li>
+            <li class="blue"><a href="" class="ptb-10 text-center pl-5">NIRF</a></li>
+            <li class="orange"><a href="" class="ptb-10 text-center pl-5">Fees Payment Portal</a></li>
+            <li class="blue"><span class="ptb-10 text-center pl-5">Counselling Code - 1219</span></li>
+            <li class="orange"><a href="" class="ptb-10 text-center pl-5">Staff / Student Portal</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <marquee class="marq" bgcolor="#101AA8" direction="left" loop="">
+            <div class="geek1">
+                1. Dr. MAC Inter School Cricket Tournament 2024 Registration 2. April/May 2024 Examinations – Provisional Certificate
+                3. B.E/B.Tech. UG – Lateral Entry Students’ Admission – Instructions to TNEA 2024 allotted students 8. Commencement of classes for the academic year 2024-25 Odd Semester
+                9. Awardees of Alumni Scholarship from 1985-89 Batch – for the Academic Year 2024-25 10. Academic schedule for III, V and VII SEM UG and III SEM PG – 2024-2025 Odd semester (Revision 01)
+            </div>
+        </marquee>
+
+       
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-slide">
+            <img src="https://www.svce.ac.in/wp-content/uploads/2023/03/building-leaders.png" alt="Image 2">
+            <img src="https://www.svce.ac.in/wp-content/uploads/2024/07/Mechanical-and-Automation-Engineering.png" alt="Image 1">
+            <img src="https://www.svce.ac.in/wp-content/uploads/2024/05/positivessl_trust_svce.jpg" alt="Image 3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <footer class="footer">
+        <div>
+            <h3>For Management Quota Counseling:</h3>
+            <p>Contact:</p>
+            <p>044-2447 0688, 044-2447 0689</p>
+            <p>Dr. N. R. Sheela - 9840861987</p>
+            <p>Mrs. Kameshwari - 7845637195</p>
+        </div>
+        <div>
+            <h3>Campus Address:</h3>
+            <p>Sri Venkateswara College of Engineering</p>
+            <p>Post Bag No.1</p>
+            <p>Pennalur Village</p>
+            <p>Chennai - Bengaluru Highways</p>
+            <p>Sriperumbudur (off Chennai) Tk. - 602 117</p>
+            <p>Tamil Nadu, India</p>
+        </div>
+        <div>
+            <h3>Trust Office Address:</h3>
+            <p>Sri Venkateswara Educational and Health Trust</p>
+            <p>1/3A River View Road, Sector 3</p>
+            <p>Kotturpuram, Chennai, Tamil Nadu 600085</p>
+            <p>Email: acm@svce.ac.in</p>
+            <p>Email: principal@svce.ac.in</p>
+            <p>Email: enquiry@svce.ac.in</p>
+        </div>
+    </footer>  
+</body>
+<script>
+  let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide img');
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
+}
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+// Auto slide
+setInterval(nextSlide, 3000);
+
+</script>
+</html>
